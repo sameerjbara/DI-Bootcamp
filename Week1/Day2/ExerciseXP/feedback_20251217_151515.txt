@@ -1,0 +1,7 @@
+URL: https://github.com/sameerjbara/DI-Bootcamp/blob/main/Week1/Day2/ExerciseXP/ExercisesXP.py
+Brief justification:
+- correctness: All exercises are correctly implemented according to the instructions provided in the chapter content. The code addresses each problem accurately and completely. Each section is clearly delineated.
+- readability: The code is well-formatted, uses descriptive variable names, and includes comments to explain each exercise, making it easy to understand.
+- performance: The code is efficient for the given tasks; it uses appropriate data structures and algorithms for the problems presented.
+- security: The code does not involve any operations that could pose a security risk, such as handling sensitive data or interacting with external systems in a vulnerable way.
+
