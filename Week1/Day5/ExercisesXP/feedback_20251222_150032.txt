@@ -1,0 +1,10 @@
+URL: https://github.com/sameerjbara/DI-Bootcamp/blob/main/Week1/Day5/ExercisesXP/ExercisesXP.py
+suggestions for improvement:
+- The code is well-structured and solves all exercises correctly.
+- Consider adding more comments to explain the logic behind each step, especially in Exercise 3 where multiple dictionary manipulations are performed.
+Brief justification:
+- correctness: All exercises are correctly implemented, covering dictionaries, loops, conditionals, and dictionary methods, as outlined in the chapter content. The code accurately addresses each problem statement and achieves the expected outputs, including bonus sections.
+- readability: The code is generally well-formatted and easy to understand. Variable names are descriptive. However, adding more comments would enhance readability.
+- performance: The code uses efficient methods like `zip` and dictionary comprehension, making it performant. The bonus parts are also implemented with reasonable performance considerations.
+- security: The code does not involve any user input that could directly lead to security vulnerabilities. Input validation is present in the bonus section of Exercise 2, further improving security.
+

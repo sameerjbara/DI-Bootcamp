@@ -1,0 +1,9 @@
+URL: https://github.com/sameerjbara/DI-Bootcamp/blob/main/Week1/Day5/DailyChallenge/DailyChallengeDictionaries.py
+suggestions for improvement:
+- Consider encapsulating the logic for each challenge into separate functions to improve code organization and reusability.
+Brief justification:
+- correctness: The code accurately implements both challenges as described in the chapter content. Challenge 1 correctly creates the letter index dictionary based on user input. Challenge 2 correctly determines affordable items and sorts them alphabetically, returning 'Nothing' when appropriate.
+- readability: The code is well-structured and easy to understand. The use of comments clarifies the purpose of each section. Variable names are descriptive. However, encapsulating the logic into functions would further improve readability.
+- performance: The code demonstrates good performance. The `enumerate` function in Challenge 1 is efficient. The use of `replace` and type conversion in Challenge 2 is straightforward. Sorting the list of affordable items using `sorted()` is also efficient.
+- security: The code has no apparent security issues. The user input in Challenge 1 does not pose a risk. The data cleaning in Challenge 2 mitigates potential issues with improperly formatted prices.
+
