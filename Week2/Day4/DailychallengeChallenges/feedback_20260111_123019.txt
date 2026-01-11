@@ -1,0 +1,7 @@
+URL: https://github.com/sameerjbara/DI-Bootcamp/blob/main/Week2/Day4/DailychallengeChallenges/DailychallengeChallenges.py
+Brief justification:
+- correctness: The code perfectly addresses both challenges as outlined in the chapter content. It correctly sorts comma-separated words and finds the longest word in a sentence, matching the expected outputs and utilizing the specified Python topics.
+- readability: The code is well-structured and easy to follow, with clear comments that correspond to the steps outlined in the instructions.
+- performance: The code uses efficient built-in functions like `split()` and `sort()`, resulting in good performance for the given tasks.
+- security: The code does not involve any external data or system calls, so it is inherently secure.
+
