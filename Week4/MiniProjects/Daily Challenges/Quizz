@@ -1,0 +1,33 @@
+1) What is a class?
+
+A class is a blueprint or template used to define the properties (attributes) and behaviors (methods) that objects will have.
+
+2) What is an instance?
+
+An instance is a concrete object created from a class. Each instance has its own data but shares the class’s structure and behavior.
+
+3) What is encapsulation?
+
+Encapsulation is the concept of bundling data and the methods that operate on that data together, while restricting direct access to some of the object’s internal details (using private/protected attributes).
+
+4) What is abstraction?
+
+Abstraction focuses on exposing only the essential features of an object while hiding the complex implementation details, often using abstract classes or interfaces.
+
+5) What is inheritance?
+
+Inheritance allows a class (child/subclass) to reuse and extend the attributes and methods of another class (parent/superclass).
+
+6) What is multiple inheritance?
+
+Multiple inheritance is when a class inherits from more than one parent class, gaining features from all of them.
+
+7) What is polymorphism?
+
+Polymorphism allows different classes to define methods with the same name but different behaviors, enabling objects of different types to be used interchangeably.
+
+8) What is method resolution order (MRO)?
+
+Method Resolution Order (MRO) is the order in which Python searches for a method in a class hierarchy, especially important in multiple inheritance. Python follows the C3 linearization algorithm.
+
+

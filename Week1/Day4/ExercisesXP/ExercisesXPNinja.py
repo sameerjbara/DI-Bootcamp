@@ -118,8 +118,6 @@ print("Largest:", max(numbers))
 print("Smallest:", min(numbers))
 
 
-
-
 # Exercise 3: Working on a paragraph
 # Find an interesting paragraph of text online. (Please keep it appropriate to the social context of our class.)
 # Paste it to your code, and store it in a variable.
