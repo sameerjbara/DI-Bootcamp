@@ -96,72 +96,77 @@
 # use **kwargs for passing multiple animals. The keys will be the animal name and the value will be the quantity.
 # Then you can call the method this way: macdonald.add_animal('cow'= 5, 'sheep' = 2, 'goat' = 12)
 
+class Farm:
+    def __init__(self, farm_name):
+        self.name = farm_name
+        self.animals = {}
 
-class Phone:
-    def __init__(self, phone_number):
-        self.phone_number = phone_number
-        self.call_history = []
-        self.messages = []
+    # Upgraded version using kwargs
+    def add_animal(self, animal_type=None, count=1, **kwargs):
+        # If single animal provided (original behavior)
+        if animal_type:
+            if animal_type in self.animals:
+                self.animals[animal_type] += count
+            else:
+                self.animals[animal_type] = count
 
-    def call(self, other_phone):
-        call_str = f"{self.phone_number} called {other_phone.phone_number}"
-        print(call_str)
-        self.call_history.append(call_str)
+        # If multiple animals provided using kwargs
+        for animal, qty in kwargs.items():
+            if animal in self.animals:
+                self.animals[animal] += qty
+            else:
+                self.animals[animal] = qty
 
-    def show_call_history(self):
-        print("\n--- Call History ---")
-        for call in self.call_history:
-            print(call)
+    def get_info(self):
+        output = f"{self.name}'s farm\n\n"
 
-    def send_message(self, other_phone, content):
-        msg = {
-            "to": other_phone.phone_number,
-            "from": self.phone_number,
-            "content": content
-        }
-        self.messages.append(msg)
-        other_phone.messages.append(msg)
-        print(f"{self.phone_number} sent a message to {other_phone.phone_number}: {content}")
+        # Align columns
+        max_length = max(len(animal) for animal in self.animals)
 
-    def show_outgoing_messages(self):
-        print("\n--- Outgoing Messages ---")
-        for msg in self.messages:
-            if msg["from"] == self.phone_number:
-                print(msg)
+        for animal, count in self.animals.items():
+            output += f"{animal.ljust(max_length)} : {count}\n"
 
-    def show_incoming_messages(self):
-        print("\n--- Incoming Messages ---")
-        for msg in self.messages:
-            if msg["to"] == self.phone_number:
-                print(msg)
+        output += "\n    E-I-E-I-0!"
+        return output
 
-    def show_messages_from(self, other_phone):
-        print(f"\n--- Messages from {other_phone.phone_number} ---")
-        for msg in self.messages:
-            if msg["from"] == other_phone.phone_number and msg["to"] == self.phone_number:
-                print(msg)
+    def get_animal_types(self):
+        return sorted(self.animals.keys())
+
+    def get_short_info(self):
+        animal_types = self.get_animal_types()
+
+        animals_list = []
+        for animal in animal_types:
+            if self.animals[animal] > 1:
+                animals_list.append(animal + "s")
+            else:
+                animals_list.append(animal)
+
+        if len(animals_list) > 1:
+            animals_str = ", ".join(animals_list[:-1]) + " and " + animals_list[-1]
+        else:
+            animals_str = animals_list[0]
+
+        return f"{self.name}'s farm has {animals_str}."
 
 
-# =========================
-# TEST
-# =========================
-phone1 = Phone("050-1111111")
-phone2 = Phone("052-2222222")
-phone3 = Phone("054-3333333")
+# ---------------- TEST ----------------
 
-# Calls
-phone1.call(phone2)
-phone1.call(phone3)
-phone2.call(phone1)
+macdonald = Farm("McDonald")
 
-phone1.show_call_history()
-phone2.show_call_history()
+# Original style calls
+macdonald.add_animal('cow', 5)
+macdonald.add_animal('sheep')
+macdonald.add_animal('sheep')
+macdonald.add_animal('goat', 12)
 
-# Messages
-phone1.send_message(phone2, "Hey bro")
-phone2.send_message(phone1, "Hello!")
-phone3.send_message(phone1, "Yo Sameer")
+print(macdonald.get_info())
+print()
+print(macdonald.get_short_info())
 
-phone1.show_outgoing_messages()
-phone1.show_incoming_messages()
-phone1.show_messages_from(phone2)
+# Using upgraded kwargs version
+macdonald2 = Farm("OldMac")
+macdonald2.add_animal(cow=5, sheep=2, goat=12)
+
+print()
+print(macdonald2.get_info())
